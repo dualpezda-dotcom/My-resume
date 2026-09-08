@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duvier Perez — Account Coordinator</title>
+<meta name="description" content="Portfolio of selected work: marketing account coordination for financial institutions. Calendar automation, SOPs, client retention, KPI frameworks.">
+<meta property="og:title" content="Duvier Perez — Account Coordinator">
+<meta property="og:description" content="Portfolio of selected work: marketing account coordination for financial institutions.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0C1A1F;
+    --paper:#FFFFFF;
+    --panel:#F2F7F6;
+    --teal-deep:#0D7A68;
+    --teal-bright:#43BFA8;
+    --muted:#6B747C;
+    --rule:#E4E8EA;
+    --rule-dark:#2A3B41;
+    --measure:64ch;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:#1A1D21;
+    font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{margin:0;letter-spacing:-0.022em;line-height:1.15;font-weight:700}
+  p{margin:0 0 0.85em}
+  p:last-child{margin-bottom:0}
+  a{color:var(--teal-deep)}
+  :focus-visible{outline:2px solid var(--teal-bright);outline-offset:3px;border-radius:2px}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--ink);color:#fff;padding:88px 0 72px}
+  .hero .bar{width:132px;height:5px;background:var(--teal-bright);margin-bottom:44px}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.1rem);margin-bottom:14px}
+  .hero .role{
+    font-size:clamp(1.05rem,2.4vw,1.3rem);
+    color:var(--teal-bright);font-weight:500;margin-bottom:32px;letter-spacing:-0.01em;
+  }
+  .hero p.lede{max-width:60ch;color:#C6D2D5;font-size:1.06rem;margin-bottom:34px}
+  .hero p.lede strong{color:#fff;font-weight:600}
+
+  .actions{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{
+    display:inline-block;padding:12px 22px;border-radius:2px;
+    font-size:0.94rem;font-weight:600;text-decoration:none;
+    border:1px solid transparent;
+  }
+  .btn-primary{background:var(--teal-bright);color:var(--ink)}
+  .btn-primary:hover{background:#5ED2BC}
+  .btn-ghost{border-color:var(--rule-dark);color:#D6E0E2}
+  .btn-ghost:hover{border-color:var(--teal-bright);color:#fff}
+
+  /* ---------- SHELL ---------- */
+  .shell{display:grid;grid-template-columns:1fr;gap:0}
+  @media(min-width:960px){
+    .shell{grid-template-columns:206px 1fr;gap:56px;align-items:start}
+  }
+
+  .rail{display:none}
+  @media(min-width:960px){
+    .rail{display:block;position:sticky;top:40px;padding-top:64px}
+    .rail .grp{margin-bottom:22px}
+    .rail .gtitle{
+      font-size:0.72rem;font-weight:700;color:var(--muted);
+      letter-spacing:0.04em;margin-bottom:8px;
+    }
+    .rail a{
+      display:block;font-size:0.86rem;color:#4A535A;text-decoration:none;
+      padding:3px 0 3px 12px;border-left:2px solid var(--rule);line-height:1.4;
+    }
+    .rail a:hover{color:var(--ink);border-left-color:var(--teal-bright)}
+    .rail .dl{
+      margin-top:26px;font-size:0.84rem;font-weight:600;
+      color:var(--teal-deep);text-decoration:none;display:block;
+    }
+    .rail .dl:hover{text-decoration:underline}
+  }
+
+  main{padding:64px 0 0;min-width:0}
+
+  /* ---------- NUMBERS ---------- */
+  .numbers{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:24px 28px;
+    margin:0 0 48px;
+  }
+  @media(min-width:760px){.numbers{grid-template-columns:repeat(4,1fr)}}
+  .numbers .n{border-top:2px solid var(--ink);padding-top:12px}
+  .numbers .fig{font-size:1.85rem;font-weight:700;letter-spacing:-0.035em;line-height:1;color:var(--ink)}
+  .numbers .cap{font-size:0.79rem;color:var(--muted);line-height:1.45;margin-top:8px}
+
+  .intro{max-width:var(--measure);margin-bottom:16px}
+  .intro p{font-size:1.03rem}
+
+  /* ---------- CASES ---------- */
+  .case{padding-top:52px;margin-top:52px;border-top:1px solid var(--rule);max-width:var(--measure);scroll-margin-top:24px}
+  .case:first-of-type{border-top:2px solid var(--ink)}
+  .case h2{font-size:clamp(1.4rem,3.4vw,1.8rem);margin-bottom:10px}
+  .kicker{font-size:0.78rem;font-weight:600;color:var(--teal-deep);margin-bottom:8px}
+  .facts{
+    font-size:0.82rem;color:var(--muted);
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    padding:8px 0;margin:0 0 22px;
+  }
+  .facts b{color:#1A1D21;font-weight:600}
+  .facts span{display:block}
+  @media(min-width:620px){
+    .facts span{display:inline;margin-right:18px}
+  }
+  .case h3{
+    font-size:0.86rem;font-weight:600;color:var(--teal-deep);
+    margin:22px 0 6px;letter-spacing:0;
+  }
+  .case ul{margin:0;padding-left:20px}
+  .case li{margin-bottom:9px}
+  .case li::marker{color:var(--teal-bright)}
+
+  .outcome{
+    background:var(--panel);border-left:3px solid var(--teal-deep);
+    padding:18px 20px;margin-top:24px;
+  }
+  .outcome h3{margin-top:0}
+
+  /* ---------- TABLE ---------- */
+  .tblwrap{overflow-x:auto;margin:14px 0 10px}
+  table{border-collapse:collapse;width:100%;font-size:0.87rem;min-width:420px}
+  th{
+    text-align:left;font-size:0.72rem;color:var(--muted);font-weight:700;
+    letter-spacing:0.04em;border-bottom:2px solid var(--ink);padding:0 10px 6px 0;
+  }
+  td{border-bottom:1px solid #DDE5E4;padding:8px 10px 8px 0}
+  th.r,td.r{text-align:right;padding-right:0}
+  td.was{color:#8A9299}
+  td.now{font-weight:700;color:var(--ink)}
+  td.dlt{font-weight:700;color:var(--teal-deep)}
+  .tnote{font-size:0.78rem;color:#7C858C;line-height:1.5;margin-bottom:12px}
+
+  /* ---------- CAPABILITIES ---------- */
+  .caps{padding-top:52px;margin-top:52px;border-top:2px solid var(--ink);max-width:var(--measure);scroll-margin-top:24px}
+  .quote{
+    border-left:3px solid var(--teal-bright);padding-left:16px;
+    font-size:1.14rem;font-weight:500;color:var(--ink);
+    letter-spacing:-0.012em;margin:16px 0 30px;line-height:1.5;
+  }
+  .grp2{margin-bottom:18px}
+  .grp2 .t{font-size:0.82rem;font-weight:600;color:var(--teal-deep);margin-bottom:2px}
+  .grp2 .v{font-size:0.94rem;color:#2A3138}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);color:#B7C4C7;margin-top:72px;padding:56px 0 48px;
+    font-size:0.92rem;
+  }
+  footer h2{color:#fff;font-size:1.5rem;margin-bottom:16px}
+  footer a{color:var(--teal-bright)}
+  footer .links{margin-bottom:26px;line-height:2}
+  footer .note{
+    border-top:1px solid var(--rule-dark);padding-top:18px;margin-top:26px;
+    font-size:0.79rem;color:#8FA0A6;max-width:70ch;line-height:1.6;
+  }
+  footer .note b{color:#C6D2D5}
+
+  /* mobile sticky download */
+  .mdl{
+    position:fixed;left:0;right:0;bottom:0;z-index:20;
+    background:var(--ink);border-top:1px solid var(--rule-dark);
+    padding:10px 16px;display:flex;justify-content:center;
+  }
+  .mdl a{
+    background:var(--teal-bright);color:var(--ink);text-decoration:none;
+    font-weight:600;font-size:0.9rem;padding:11px 20px;border-radius:2px;
+    display:block;text-align:center;width:100%;max-width:420px;
+  }
+  @media(min-width:960px){.mdl{display:none}}
+  @media(max-width:959px){body{padding-bottom:66px}}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+  html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="bar"></div>
+    <h1>Duvier Perez</h1>
+    <div class="role">Account Coordinator — client service, marketing operations, process design</div>
+    <p class="lede">I coordinate marketing accounts for financial institutions, where the work is equal parts client relationship and production logistics. My background is in international business, project management and business intelligence, and it shapes how I approach the role: <strong>I look for the point where a process breaks or repeats itself, document it, and rebuild it so the next person doesn't have to solve it again.</strong></p>
+    <div class="actions">
+      <a class="btn btn-primary" href="./Duvier_Perez_Account_Coordinator_Portfolio.pdf">Download the full portfolio (PDF)</a>
+      <a class="btn btn-ghost" href="mailto:duvierperez@outlook.com">Email me</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<div class="shell">
+
+  <aside class="rail">
+    <div class="grp">
+      <div class="gtitle">Current role</div>
+      <a href="#zeus">Calendar automation</a>
+      <a href="#sops">Coordinator SOPs</a>
+      <a href="#retention">Account retention</a>
+      <a href="#intake">Client discovery</a>
+      <a href="#onboarding">Onboarding</a>
+      <a href="#qbr">Business reviews</a>
+      <a href="#portfolio">150-account book</a>
+    </div>
+    <div class="grp">
+      <div class="gtitle">Earlier work</div>
+      <a href="#presvi">PRESVI platform</a>
+      <a href="#kpi">KPI framework</a>
+    </div>
+    <div class="grp">
+      <div class="gtitle">More</div>
+      <a href="#capabilities">Skills &amp; tools</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="dl" href="./Duvier_Perez_Account_Coordinator_Portfolio.pdf">Download PDF</a>
+  </aside>
+
+  <main>
+
+    <div class="numbers">
+      <div class="n"><div class="fig">150+</div><div class="cap">Accounts coordinated across marketing and website services</div></div>
+      <div class="n"><div class="fig">89%</div><div class="cap">Reduction in calendar production time via the platform I built</div></div>
+      <div class="n"><div class="fig">3,000+</div><div class="cap">Course enrolments driven from zero on a digital platform</div></div>
+      <div class="n"><div class="fig">$15–20K</div><div class="cap">Annual account retained after a full-service cancellation notice</div></div>
+    </div>
+
+    <div class="intro">
+      <p>These nine pieces are not unrelated projects. They are the same idea applied at different points in the account lifecycle: better information going in, a shared standard for how work gets built, a structured moment to demonstrate value, and the relationship judgment to hold an account together when the systems have already failed it.</p>
+      <p>The last two are earlier work — four years leading a digital education platform from zero users to more than 3,000 enrolments, and the KPI framework I built to hold fifteen concurrent projects to one standard of measurement.</p>
+    </div>
+
+    <!-- 01 -->
+    <section class="case" id="zeus">
+      <div class="kicker">Current role</div>
+      <h2>ZEUS — marketing calendar automation platform</h2>
+      <div class="facts">
+        <span><b>My role:</b> Concept, design, build, internal pitch</span>
+        <span><b>Result:</b> 89% reduction in production time</span>
+      </div>
+      <p>Every marketing client needs a calendar every quarter, assembled from their intake form, a website review, prior calendars and their coordinator's notes. Across four client-service teams that is roughly 130 clients — the same manual assembly, repeated 130 times a quarter.</p>
+      <h3>The problem</h3>
+      <p>Two problems, not one. Volume was the obvious one: production consumed coordinator hours that belonged to client relationships. Consistency was the expensive one — without a documented standard, calendars varied in structure and depth depending on who built them, which made them harder to review internally and harder for clients to compare across quarters.</p>
+      <h3>What I did</h3>
+      <ul>
+        <li><b>Documented the standard first.</b> Before automating anything I wrote down what a compliant calendar contains, including how seasonal and regulatory moments for financial institutions get handled. Automation without a standard only produces inconsistency faster.</li>
+        <li><b>Designed and built the prototype.</b> ZEUS ingests the intake form, a website review, prior calendars and coordinator notes, then produces a draft annual calendar against those rules for a coordinator to review and refine.</li>
+        <li><b>Scoped two deployment paths honestly.</b> A local install and a fully cloud-hosted option, side by side, with the real trade-offs on each: cost, setup effort, reliability. I made a recommendation and left the decision to leadership.</li>
+        <li><b>Planned the integration roadmap</b> — connections into Google Workspace and the project management platform, so the output lands inside the existing workflow.</li>
+      </ul>
+      <div class="outcome">
+        <h3>Outcome</h3>
+        <div class="tblwrap">
+        <table>
+          <thead><tr><th>Measured across the 130-client book</th><th class="r">Manual</th><th class="r">With ZEUS</th><th class="r">Change</th></tr></thead>
+          <tbody>
+            <tr><td>Time per client, per year</td><td class="r was">140 min</td><td class="r now">16 min</td><td class="r dlt">−89%</td></tr>
+            <tr><td>Total production time, per year</td><td class="r was">303 h 20 m</td><td class="r now">34 h 40 m</td><td class="r dlt">−268 h 40 m</td></tr>
+            <tr><td>Equivalent working weeks (40 h)</td><td class="r was">7.58</td><td class="r now">0.87</td><td class="r dlt">−6.72</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="tnote">Both figures are end-to-end and measured the same way. Manual: 25 minutes of build plus roughly 10 minutes of review, per client, every quarter. ZEUS: 6 minutes of generation plus 10 minutes of review, per client, once for the full year.</p>
+        <p>Close to seven working weeks returned to client-facing work every year. And the durable win is not the hours: every calendar now starts from the same documented standard, so quality no longer depends on who is assigned to the account.</p>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="case" id="sops">
+      <div class="kicker">Current role</div>
+      <h2>Account Coordinator standard operating procedures</h2>
+      <div class="facts">
+        <span><b>My role:</b> Author</span>
+        <span><b>Result:</b> 5+ coordinators trained</span>
+      </div>
+      <p>The Account Coordinator sits between the client and several internal production teams — social, email, SEO, paid media, web. Almost everything that made the role work well was undocumented. It lived in the heads of whoever had been doing it longest, and new coordinators learned by shadowing.</p>
+      <h3>The problem</h3>
+      <p>Undocumented process is fragile in three specific ways. Onboarding a new coordinator is slow and produces inconsistent habits. Coverage is hard when someone is out, because nobody else knows the shape of their accounts. And improving a process is nearly impossible when nobody can point to what the current one is.</p>
+      <h3>What I did</h3>
+      <p>I wrote the standard operating procedures for the coordinator function, covering the recurring workflows the role actually runs on: client communication cadence, request intake and routing to production teams, escalation paths, calendar and deliverable timelines, and account handoff and coverage.</p>
+      <p>I wrote them to be used rather than filed — concrete steps and decision rules, not aspirational descriptions of good service — then consolidated everything into a single hub in Google Workspace, so a new coordinator has one place to go rather than a folder trail and a list of people to ask.</p>
+      <div class="outcome">
+        <h3>Outcome</h3>
+        <p>More than five account coordinators have been trained against the SOPs. Onboarding that previously required six separate meetings across different departments now runs from the single hub — the same standard, without pulling six teams away from their own work every time someone joins.</p>
+        <p>The wider effect is that individual competence became team capability: coverage is possible without a scramble, and there is now a shared reference to argue from when a process genuinely needs to change.</p>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="case" id="retention">
+      <div class="kicker">Current role</div>
+      <h2>Retaining a full-service account at risk of cancellation</h2>
+      <div class="facts">
+        <span><b>My role:</b> Relationship owner</span>
+        <span><b>Value:</b> USD 15,000–20,000 annual account</span>
+      </div>
+      <p>A long-standing credit union client notified the agency that they intended to cancel every service on their account. The trigger was not the current work. It was accumulated frustration from how the relationship had been handled before I took it over.</p>
+      <h3>The problem</h3>
+      <p>The client had already decided. That changes the task: you are not defending the work, you are rebuilding credibility that someone else spent. It also rules out the two easiest responses — defending the agency's past decisions, and over-promising to buy time. Both would have confirmed exactly what they already believed about us.</p>
+      <h3>What I did</h3>
+      <ul>
+        <li><b>Took the conversation directly</b> rather than routing it upward. A client who has decided to leave needs a person, not a process.</li>
+        <li><b>Listened before proposing anything,</b> and separated the specific service failures from the general loss of confidence. They look like one complaint but they need different responses — the first is fixable with a plan, the second only with time.</li>
+        <li><b>Rebuilt the communication cadence:</b> predictable updates on a schedule they could rely on, named ownership for every open item, and no commitment made that I could not personally track to completion.</li>
+        <li><b>Let the pattern do the arguing.</b> I delivered consistently for long enough that the record, rather than the apology, became the case for staying.</li>
+      </ul>
+      <div class="outcome">
+        <h3>Outcome</h3>
+        <p>The client retained all services rather than cancelling — an account representing USD 15,000 to 20,000 in annual revenue, preserved along with the multi-year relationship behind it.</p>
+        <p>The wider lesson shaped how I now open accounts: most cancellations are not decided in the month they are announced. They are the accumulation of small unmet expectations, which is an argument for cadence and documentation rather than for heroics.</p>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="case" id="intake">
+      <div class="kicker">Current role</div>
+      <h2>Topic Selection Form</h2>
+      <div class="facts">
+        <span><b>My role:</b> Designed and implemented</span>
+        <span><b>Type:</b> Client discovery and intake design</span>
+      </div>
+      <p>Marketing strategy for a credit union is only as good as the information behind it. Coordinators were building content plans from thin input — clients asking for "more engagement" or "more visibility" without the specifics that make a campaign land: which products they are pushing this quarter, which branches are opening, what their members actually call in and ask about.</p>
+      <h3>The problem</h3>
+      <p>Vague input does not stay vague — it converts into rework. Content teams guess, coordinators go back for clarification, calendars get rebuilt mid-quarter, and the client concludes the agency does not understand their business. The failure looks like a content problem but it originates at intake.</p>
+      <h3>What I did</h3>
+      <p>I built a Topic Selection Form: a structured discovery instrument that replaces the open-ended "what would you like to post about?" with specific, answerable questions tied to the client's actual quarter — product priorities, local events and branch activity, member questions and objections, and campaigns already planned internally.</p>
+      <p>Two design constraints drove it. It had to be completable without a call, because coordinator hours are the scarce resource. And the answers had to be concrete enough to brief a content team from directly, without a translation step in between.</p>
+      <div class="outcome">
+        <h3>Outcome</h3>
+        <p>Higher-quality strategic input at the top of the process, fewer clarification rounds downstream, and content plans grounded in what the client is actually trying to accomplish. It also became the primary input to the ZEUS calendar platform — better structured intake is what made automating the output feasible at all.</p>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="case" id="onboarding">
+      <div class="kicker">Current role</div>
+      <h2>Client and service onboarding</h2>
+      <div class="facts">
+        <span><b>My role:</b> Onboarding lead</span>
+        <span><b>Scope:</b> 6 clients onboarded — social, email, SEO, paid ads</span>
+      </div>
+      <p>I run onboarding both for clients new to the agency and for existing clients adding service lines. Each service has its own production team, kickoff requirements, data access needs and delivery rhythm, and each combination has to be assembled into one coherent experience for the client.</p>
+      <h3>The problem</h3>
+      <p>Onboarding is where an account is either set up to last or quietly undermined. For a new client, the first sixty days establish every expectation that follows. For an existing client adding a service, the risk is higher still: they already have a baseline for how the agency operates, and a rough start does not just cost the new service — it puts the original one back on the table.</p>
+      <h3>What I did</h3>
+      <ul>
+        <li><b>Ran discovery and kickoff for each service,</b> translating client goals into briefs the relevant production team could execute against without further interpretation.</li>
+        <li><b>Kept new-client and expansion onboarding on the same standard,</b> so the experience did not depend on which door the client came through.</li>
+        <li><b>Set expectations explicitly at the start</b> — deliverables, timelines, review cycles, and what the client owed us to keep the work moving. Most onboarding friction is an unstated dependency.</li>
+        <li><b>Coordinated across teams so the client experienced one agency, not four.</b> A client buying three services should not receive three separate kickoff calls, three reporting formats and three points of contact.</li>
+        <li><b>Established the reporting cadence from day one,</b> rather than retrofitting it after the first complaint about not knowing what was happening.</li>
+      </ul>
+      <div class="outcome">
+        <h3>Outcome</h3>
+        <p>Six clients onboarded to date — new accounts and existing accounts adding service lines — without disruption to work already running, each brought online against a consistent standard rather than an improvised one.</p>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="case" id="qbr">
+      <div class="kicker">Current role</div>
+      <h2>Quarterly business reviews for multi-service accounts</h2>
+      <div class="facts">
+        <span><b>My role:</b> Created the format, delivered the reviews</span>
+        <span><b>Type:</b> Client reporting and retention</span>
+      </div>
+      <p>The agency's largest multi-service accounts received performance data every month, but data is not the same as perspective. They got numbers by channel, with no synthesis across channels and no connection back to what the institution was trying to achieve that year.</p>
+      <h3>The problem</h3>
+      <p>A client who cannot see the value of the work will eventually stop paying for it, regardless of whether the value is there. And an agency with no scheduled moment to hear concerns only learns about them when they arrive as a cancellation notice.</p>
+      <h3>What I did</h3>
+      <p>I built a quarterly business review format for the top multi-service accounts that pulls the quarter into a single view:</p>
+      <ul>
+        <li>Performance across every active service, read together rather than channel by channel</li>
+        <li>Interpretation — what the numbers mean and what caused the movement, not only what they say</li>
+        <li>A recommendation for the coming quarter the client can approve, adjust or push back on</li>
+        <li>An open agenda item for what is not working, asked directly rather than waited for</li>
+      </ul>
+      <p>My background in KPI design and reporting is what let me build this as analysis rather than as a dashboard export with commentary attached.</p>
+      <div class="outcome">
+        <h3>Outcome</h3>
+        <p>Both sides gained a scheduled moment that had not existed: the client sees value on a predictable rhythm, and the agency surfaces friction early enough to act on it. Reviews also generate expansion conversations from evidence rather than from a sales push — the recommendation for next quarter is frequently another service.</p>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="case" id="portfolio">
+      <div class="kicker">Current role</div>
+      <h2>Managing a 150-account portfolio</h2>
+      <div class="facts">
+        <span><b>My role:</b> Account Coordinator</span>
+        <span><b>Type:</b> Ongoing coordination at scale</span>
+      </div>
+      <p>I coordinate a book of more than 150 accounts holding marketing services, website services, or both — financial institutions with different sizes, markets, service mixes and internal decision speeds.</p>
+      <h3>What the volume actually demands</h3>
+      <ul>
+        <li><b>Triage.</b> Not every request is urgent, and treating them as if they were is how coordinators burn out and clients stop trusting the word "urgent" when it matters.</li>
+        <li><b>Systems over memory.</b> At this volume, anything I have to remember is something I will eventually forget. This is the pressure that produced the SOPs, the intake form and ZEUS — they are not side projects, they are what makes the core job survivable.</li>
+        <li><b>Translation.</b> Clients describe outcomes; production teams need specifications. A large share of the role is converting one into the other without losing intent along the way.</li>
+        <li><b>Pattern recognition.</b> When the same question arrives from fifteen clients, that is not fifteen problems. It is one gap in how we communicate, and fixing it once is cheaper than answering it fifteen times.</li>
+        <li><b>Knowing which accounts need a human this week.</b> Coverage cannot be uniform across 150 accounts. Judgment about where attention goes is the actual skill.</li>
+      </ul>
+      <div class="outcome">
+        <h3>Why this is here</h3>
+        <p>The six cases above are the visible artifacts. This is the condition that produced them: every system in this portfolio exists because the volume made the manual version untenable, and I would rather fix a process once than absorb it indefinitely.</p>
+      </div>
+    </section>
+
+    <!-- 08 -->
+    <section class="case" id="presvi">
+      <div class="kicker">Earlier work · 2021–2025</div>
+      <h2>PRESVI — digital education platform</h2>
+      <div class="facts">
+        <span><b>My role:</b> Special Projects Coordinator — platform lead</span>
+        <span><b>Result:</b> 0 to 3,000+ enrolments in under a year</span>
+      </div>
+      <p>Corporación Honorable Presbiterio Central is a multi-site institution in Bogotá that runs educational programming across its network. PRESVI was its digital education platform, and I led it for four years — from an empty platform through implementation to ongoing operation.</p>
+      <h3>The problem</h3>
+      <p>PRESVI existed as a platform and nothing else. No courses, no services, no users. The institution had built the infrastructure for digital education and none of the substance that would make anyone open it — the harder version of the problem, because there is no existing behaviour to improve, only one to create.</p>
+      <p>It was also structurally difficult: I had no line authority over the people the platform depended on. Adoption could not be mandated, only earned, one area at a time.</p>
+      <h3>What I did</h3>
+      <ul>
+        <li><b>Built the catalogue from nothing.</b> More than 20 online courses across a range of fields, which meant recruiting subject leads, coordinating content production and holding a schedule together across contributors who had other jobs.</li>
+        <li><b>Led implementation and logistics end to end</b> — rollout planning and the operational running of the platform once live. Launch is the easy half; four years of keeping something in use is the harder one.</li>
+        <li><b>Coordinated stakeholders I had no authority over.</b> The work depended on clear communication, credible commitments and consistent follow-through rather than on an org chart — the same skill account coordination runs on.</li>
+        <li><b>Built KPI tracking and performance reporting,</b> so decisions about programming came from participation and outcome data rather than from impressions.</li>
+      </ul>
+      <div class="outcome">
+        <h3>Outcome</h3>
+        <div class="tblwrap">
+        <table>
+          <thead><tr><th>PRESVI</th><th class="r">At handover to me</th><th class="r">Within one year</th></tr></thead>
+          <tbody>
+            <tr><td>Courses available on the platform</td><td class="r was">0</td><td class="r now">20+</td></tr>
+            <tr><td>Enrolments</td><td class="r was">0</td><td class="r now">3,000+</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Four years of owning a single platform taught me what shows up in every case here: the systems people keep using are the ones built with the people who have to use them.</p>
+      </div>
+    </section>
+
+    <!-- 09 -->
+    <section class="case" id="kpi">
+      <div class="kicker">Earlier work · 2021–2025</div>
+      <h2>KPI framework for a 15-project portfolio</h2>
+      <div class="facts">
+        <span><b>My role:</b> Designed and ran the framework</span>
+        <span><b>Scope:</b> 15+ concurrent projects, three domains</span>
+      </div>
+      <p>Alongside PRESVI, the institution ran more than fifteen projects at the same time across three very different domains — educational, environmental and social. Each had its own lead, its own timeline, and its own idea of what success looked like.</p>
+      <h3>The problem</h3>
+      <p>With fifteen projects and no common measurement framework, "how are we doing?" had no answerable version at the portfolio level. One project counted attendance, another counted environmental output, another counted families reached — all legitimate, none comparable. Leadership could see fifteen separate stories and no portfolio.</p>
+      <p>The practical cost was that resourcing decisions ran on advocacy rather than evidence. The project with the most persuasive lead got attention, which is not the same as the project that most needed it — and a project drifting quietly had no mechanism to surface before it failed.</p>
+      <h3>What I did</h3>
+      <ul>
+        <li><b>Built a single KPI matrix covering every active project,</b> defining for each one what success actually meant, how it would be measured, at what frequency, and who owned the number. Ownership matters more than the indicator: a metric nobody is responsible for stops being reported by the second month.</li>
+        <li><b>Defined indicators with each project lead rather than imposing them.</b> An environmental project and an adult education programme need genuinely different measures, and a framework that pretends otherwise gets quietly abandoned by the people expected to feed it.</li>
+        <li><b>Kept a common spine across all three domains</b> — progress against plan, resource use and reach — so projects stayed comparable at portfolio level even where their specific indicators differed. That is what turns fifteen reports into one view.</li>
+        <li><b>Built the reporting in Power BI and ran the monitoring,</b> so institutional planning drew on data rather than on whoever was in the room.</li>
+      </ul>
+      <div class="outcome">
+        <h3>Outcome</h3>
+        <p>Leadership gained one comparable view across fifteen-plus concurrent projects in three domains: which were on track, which were consuming resources without moving, and where attention was worth redirecting. Projects that were drifting became visible early enough to correct rather than at the point of failure.</p>
+        <p>This is the piece of my prior experience that transfers most directly to account coordination. A 150-account book is the same structural problem — many concurrent workstreams, different owners, no possibility of holding it all in your head, and a constant need to know which ones need you this week.</p>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="caps" id="capabilities">
+      <h2>Skills, tools and working principles</h2>
+      <div class="quote">"If it happens twice, document it. If it happens a hundred times, build the system."</div>
+
+      <div class="grp2"><div class="t">Account management</div><div class="v">Portfolio management at scale · Client retention and at-risk account recovery · Service expansion onboarding · Quarterly business reviews · Escalation handling · Stakeholder communication</div></div>
+      <div class="grp2"><div class="t">Marketing operations</div><div class="v">Content calendar planning · Multi-channel coordination across social, email, SEO and paid media · Creative brief writing · Cross-team workflow management · Campaign timeline management</div></div>
+      <div class="grp2"><div class="t">Analysis and reporting</div><div class="v">KPI design and definition · Performance reporting and interpretation · Business intelligence · Data analysis · Strategic planning</div></div>
+      <div class="grp2"><div class="t">Process and systems</div><div class="v">SOP authoring · Discovery and intake design · Workflow automation · AI-assisted tooling · Agile and Scrum methodologies · Documentation and knowledge transfer</div></div>
+      <div class="grp2"><div class="t">Industry knowledge</div><div class="v">Credit unions and banks · Financial services marketing · Regulatory and seasonal content considerations for financial institutions</div></div>
+      <div class="grp2"><div class="t">Languages</div><div class="v">Spanish (native) and English (professional working proficiency) — client-facing communication and written deliverables in both</div></div>
+      <div class="grp2"><div class="t">Education and certification</div><div class="v">M.Sc. Project Management, Northern International University (in progress) · B.A. International Business, Universidad de Medellín · Business Intelligence with Power BI, Universidad de los Andes · PMI Project Management, Fundación Compensar</div></div>
+      <div class="grp2"><div class="t">Tools</div><div class="v">Monday.com · Copper CRM · Power BI · Google Workspace · Excel · AI-assisted workflow tools · HTML / CSS / JS</div></div>
+    </section>
+
+  </main>
+</div>
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <div class="links">
+      <a href="mailto:duvierperez@outlook.com">duvierperez@outlook.com</a><br>
+      <a href="tel:+573171700031">(+57) 317 170 0031</a><br>
+      <a href="https://www.linkedin.com/in/duvier-alexander-perez-david-46738020a" target="_blank" rel="noopener">LinkedIn</a><br>
+      <a href="./Duvier_Perez_Account_Coordinator_Portfolio.pdf">Download the full portfolio (PDF)</a>
+    </div>
+    <p>Bogotá, Colombia · Available for remote roles across North American time zones</p>
+    <p class="note"><b>A note on confidentiality.</b> Client names and identifying details have been withheld or generalized throughout, and no proprietary internal materials are reproduced. The systems and documentation referenced remain the property of the organizations I built them for. I am glad to discuss approach, reasoning and results in more detail in conversation.</p>
+  </div>
+</footer>
+
+<div class="mdl"><a href="./Duvier_Perez_Account_Coordinator_Portfolio.pdf">Download the full portfolio (PDF)</a></div>
+
+</body>
+</html>
